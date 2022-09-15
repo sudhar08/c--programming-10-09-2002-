@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 #include<stdio.h>
 
 int main(){
@@ -7,13 +9,17 @@ int main(){
     printf("Enter a number to find factorial: ");
 
     scanf("%d",&n); 
-
-    for(x=1;x<=n;x++)
+    if(isdigit(n)){
+     for(x=1;x<=n;x++)
 
         fact=fact*x; 
 
     printf("Factorial of %d is: %d",n,fact);
-
+ }
+ else{
+ 	printf( "input is invalid "); 
+ }
     return 0;
 
 }
+
